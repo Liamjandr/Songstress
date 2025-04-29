@@ -3,18 +3,18 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 400f;
+    private float speed = 200f;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     [SerializeField] private Animator animator;
 
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        
+
     }
 
     // Update is called once per frame
@@ -30,7 +30,9 @@ public class Movement : MonoBehaviour
 
         Anim(HorizontalInput);
         if (Input.GetKey("a")) sprite.flipX = true;
-        if (Input.GetKey("d")) sprite.flipX = false;
+        else if (Input.GetKey("d")) sprite.flipX = false;
+        else if (Input.GetKey(KeyCode.LeftArrow)) sprite.flipX = true;
+        else if (Input.GetKey(KeyCode.RightArrow)) sprite.flipX = false;
 
     }
 
@@ -42,7 +44,7 @@ public class Movement : MonoBehaviour
 
     private void Anim(float moveInput)
     {
-        if(moveInput != 0)
+        if (moveInput != 0)
         {
             animator.SetBool("RunState", true);
         }
