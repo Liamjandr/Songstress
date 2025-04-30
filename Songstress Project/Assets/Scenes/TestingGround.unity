@@ -255,14 +255,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hutao
       objectReference: {fileID: 0}
-    - target: {fileID: 6915093655503529146, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_Mass
-      value: 6.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6915093655503529146, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_GravityScale
-      value: 3.7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

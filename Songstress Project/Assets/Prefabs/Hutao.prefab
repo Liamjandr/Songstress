@@ -69,7 +69,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.81
+  orthographic size: 7.27
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -243,10 +243,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 6.65
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
