@@ -69,7 +69,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2.8125
+  orthographic size: 5.81
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -292,17 +292,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.019339561, y: 0.18264508}
+  m_Offset: {x: -0.043556213, y: 0.19778034}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 4, y: 4}
     newSize: {x: 0.26, y: 0.33}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.35724592, y: 0.7186338}
+  m_Size: {x: 0.7810335, y: 1.6570199}
   m_EdgeRadius: 0
 --- !u!58 &9163010424754129796
 CircleCollider2D:
@@ -338,8 +338,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.028886676, y: -0.2120673}
-  m_Radius: 0.18849432
+  m_Offset: {x: -0.028886676, y: -0.4209339}
+  m_Radius: 0.39736092
 --- !u!114 &4984872747178447221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08204f3f5ef03eb4fb622994897c04fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 400
   animator: {fileID: 350380610227484632}
 --- !u!95 &350380610227484632
 Animator:
