@@ -148,10 +148,10 @@ TextureImporter:
       name: MC_falling_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 20
-        width: 23
-        height: 38
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: MC_falling_1
       rect:
         serializedVersion: 2
-        x: 84
-        y: 20
-        width: 22
-        height: 38
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: MC_falling_2
       rect:
         serializedVersion: 2
-        x: 149
-        y: 20
-        width: 21
-        height: 38
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 19cf8379127c0ea43b6fd845d207fed5
     internalID: 0
     vertices: []
     indices: 

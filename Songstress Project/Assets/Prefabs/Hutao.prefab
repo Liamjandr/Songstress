@@ -153,7 +153,8 @@ GameObject:
   - component: {fileID: 4984872747178447221}
   - component: {fileID: 8172184684655049966}
   - component: {fileID: 350380610227484632}
-  m_Layer: 0
+  - component: {fileID: 8437522820240602444}
+  m_Layer: 6
   m_Name: Hutao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,3 +390,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8437522820240602444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5367784728512310098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e82e36bd161a246b8c6839df070a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SampleNote: {fileID: 6334825178695707446, guid: 0a2b2583c9d4c1643b9264433441d9e7, type: 3}
+  SampleEighth: {fileID: 3592450161287976347, guid: 827613485b7bbb6448e654800e3557ab, type: 3}
+  SampleQuarter: {fileID: 655759431329109156, guid: 56608176dd79da742bea38e2bad004c6, type: 3}
+  SampleHalf: {fileID: 7890250029138819465, guid: d190b61646eebfb478eb957926af8c4b, type: 3}

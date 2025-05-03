@@ -142,10 +142,10 @@ TextureImporter:
       name: MC_startfall_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 20
-        width: 25
-        height: 33
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1ee7aeac3cd35fa47808556882581ea4
     internalID: 0
     vertices: []
     indices: 
