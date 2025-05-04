@@ -35,7 +35,7 @@ public class ToEnemy : MonoBehaviour
     {
         if(collision.gameObject.tag == "RadWorm")
         {
-            Destroy(this.gameObject);
+            poolManager.ReturnObjectToPool(this.gameObject);
             Debug.Log("Collided with RadWorm");
         }
     }

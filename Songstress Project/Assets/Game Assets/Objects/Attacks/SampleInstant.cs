@@ -87,9 +87,9 @@ public class SampleInstant : MonoBehaviour
 
     void attackKeys(Vector3 notePlacement)
     {
-        if (Input.GetKeyUp("1")) Instantiate(SampleNote, notePlacement, Quaternion.identity);
-        if (Input.GetKeyUp("2")) Instantiate(SampleEighth, notePlacement, Quaternion.identity);
-        if (Input.GetKeyUp("3")) Instantiate(SampleQuarter, notePlacement, Quaternion.identity);
-        if (Input.GetKeyUp("4")) Instantiate(SampleHalf, notePlacement, Quaternion.identity);
+        if (Input.GetKeyUp("1")) poolManager.SpawnObject(SampleNote, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+        if (Input.GetKeyUp("2")) poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+        if (Input.GetKeyUp("3")) poolManager.SpawnObject(SampleQuarter, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+        if (Input.GetKeyUp("4")) poolManager.SpawnObject(SampleHalf, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
     }
 }
