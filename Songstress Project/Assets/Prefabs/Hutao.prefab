@@ -406,3 +406,4 @@ MonoBehaviour:
   SampleEighth: {fileID: 3592450161287976347, guid: 827613485b7bbb6448e654800e3557ab, type: 3}
   SampleQuarter: {fileID: 655759431329109156, guid: 56608176dd79da742bea38e2bad004c6, type: 3}
   SampleHalf: {fileID: 7890250029138819465, guid: d190b61646eebfb478eb957926af8c4b, type: 3}
+  SampleCharged_1: {fileID: 5858485987559529416, guid: 1cdaa7c147ab3234bb936d81f2c2cc18, type: 3}

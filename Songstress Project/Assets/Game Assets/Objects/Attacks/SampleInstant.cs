@@ -72,7 +72,7 @@ public class SampleInstant : MonoBehaviour
 
 
 
-        if (Input.GetKeyUp("1") && Input.GetKeyUp("2")) Instantiate(SampleCharged_1, notePlacement, Quaternion.identity);
+        if (Input.GetKeyUp("1") && Input.GetKeyUp("2")) poolManager.SpawnObject(SampleCharged_1, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
         else attackKeys(notePlacement);
         
         //chargedChecker = false;
