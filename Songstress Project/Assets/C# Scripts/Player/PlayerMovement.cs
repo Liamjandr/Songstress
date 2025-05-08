@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     private SpriteRenderer sprite;
     [SerializeField] private Animator animator;
 
-    private bool grounded;
+    public bool grounded;
 
     public Transform groundCheck;
     public float groundRadius = 0.2f;
@@ -48,6 +48,7 @@ public class Movement : MonoBehaviour
         }
         
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+
         animator.SetBool("Grounded", grounded);
     }
 
@@ -64,6 +65,7 @@ public class Movement : MonoBehaviour
         animator.SetTrigger("Fall");
         grounded = false;
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         /* if (!grounded)
