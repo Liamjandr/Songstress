@@ -316,10 +316,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4296393981500307490, guid: f68c7cc78ae7485438194be683d20896, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: e8d0ed2b48209474cabb2bd384522861, type: 2}
     - target: {fileID: 5367784728512310098, guid: f68c7cc78ae7485438194be683d20896, type: 3}
       propertyPath: m_Name
       value: Hutao
       objectReference: {fileID: 0}
+    - target: {fileID: 6915093655503529146, guid: f68c7cc78ae7485438194be683d20896, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: e8d0ed2b48209474cabb2bd384522861, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private GameObject[] Enemies = new GameObject[4];
 
-    [SerializeField] Vector3[] setSpawn = new Vector3[5];
+    [SerializeField] Vector3[] setSpawn = new Vector3[10];
 
     void Start()
     {

@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour
     public float groundRadius = 0.2f;
     public LayerMask groundLayer;
 
+    private float jumpTimer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,9 +44,12 @@ public class Movement : MonoBehaviour
         else if (Input.GetKey(KeyCode.LeftArrow)) sprite.flipX = true;
         else if (Input.GetKey(KeyCode.RightArrow)) sprite.flipX = false;
 
-        if (Input.GetKey(KeyCode.Space) && grounded)
+        if(jumpTimer > 0 && grounded) jumpTimer -= Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.Space) && grounded && jumpTimer <= 0)
         {
             Jump();
+            jumpTimer = 0.2f;
         }
         
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);

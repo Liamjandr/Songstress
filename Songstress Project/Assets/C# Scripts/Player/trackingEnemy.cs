@@ -15,8 +15,8 @@ public class trackingEnemy : MonoBehaviour
     [SerializeField] private float trackSpeed = 10f;
     [SerializeField] private float trackingRange = 15f;
     //Wave Animation
-    [SerializeField] private float waveAmplitude = 0.00005f;
-    [SerializeField] private float waveFrequency = 0.0001f;
+    //[SerializeField] private float waveAmplitude = 0.00005f;
+    //[SerializeField] private float waveFrequency = 0.0001f;
 
     //[SerializeField] private float idleAmplitude = 0.3f;
     //[SerializeField] private float idleFrequency = 1.5f;
