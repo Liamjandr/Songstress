@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3791214911638018672}
   - component: {fileID: 9107402814031995179}
   - component: {fileID: 7551248268447084985}
+  - component: {fileID: 2897380874521417204}
   m_Layer: 10
   m_Name: RadWorm_0
   m_TagString: RadWorm
@@ -114,7 +115,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &7551248268447084985
 BoxCollider2D:
@@ -162,3 +163,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.108857, y: 0.875}
   m_EdgeRadius: 0
+--- !u!114 &2897380874521417204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5848987341399037565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8caee1e9758944c96c98be222f764e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 100
