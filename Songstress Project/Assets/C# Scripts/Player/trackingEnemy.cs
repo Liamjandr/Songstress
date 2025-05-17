@@ -1,10 +1,12 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class trackingEnemy : MonoBehaviour
 {
     private GameObject targetEnemy;
     private Transform noteTransform;
+    private SpriteRenderer sprite;
     //Despawn
     private float despawner = 0f;
     private float despawnTime = 5f;
@@ -14,60 +16,40 @@ public class trackingEnemy : MonoBehaviour
     //Speed & range
     [SerializeField] private float trackSpeed = 10f;
     [SerializeField] private float trackingRange = 15f;
-    //Wave Animation
-    //[SerializeField] private float waveAmplitude = 0.00005f;
-    //[SerializeField] private float waveFrequency = 0.0001f;
 
-    //[SerializeField] private float idleAmplitude = 0.3f;
-    //[SerializeField] private float idleFrequency = 1.5f;
+    //Wave Animation
+    [SerializeField] public float waveAmplitude = 400f;
+    [SerializeField] public float waveFrequency = 500f;
+
 
     // Random idle movement
     //private Vector2 idleDirection;
-    //private float idleOffset;
-    //private float travelDistance;
-    //private float waveOffset; // Randomized phase offset
-    private Vector2 lastDirection; // For stable wave orientation
-
-
+    private float idleRad = 5f;
+    private bool pickedLoc = false;
+    private Vector2 randomPoint;
+    private Vector2 noteVec2;
     void Start()
     {
         noteTransform = transform;
-        //waveAmplitude += Random.Range(-0.2f, 0.2f);
-        //waveFrequency += Random.Range(-1f, 1f);
-        //waveOffset = Random.Range(0f, Mathf.PI * 2);
-
+        sprite = GetComponent<SpriteRenderer>();       
         //idleDirection = Random.insideUnitCircle.normalized;
-        //idleOffset = Random.Range(0f, Mathf.PI * 2);
     }
 
     void Update()
     {
         targetEnemy = FindNearestEnemyInRange();
-
+        //Debug.Log(Mathf.Pow(125, 1f / 3f));
         if (targetEnemy != null)
         {
             noteTransform.localScale = new Vector2(noteSize, noteSize);
 
-            /*Vector2 direction = (targetEnemy.transform.position - noteTransform.position).normalized;
-            lastDirection = direction;
-            // Perpendicular vector for wave motion
-            Vector2 perpendicular = new Vector2(-direction.y, direction.x);
-            // Apply sine wave offset
-            float waveEffect = Mathf.Sin(Time.time * waveFrequency) * waveAmplitude;
-            Vector2 waveOffsetVector = perpendicular * waveEffect;
-            Debug.Log(waveOffsetVector);
-            Vector2 nextPos = Vector2.MoveTowards(noteTransform.position, targetEnemy.transform.position, Time.deltaTime * trackSpeed);
-            noteTransform.position = nextPos + waveOffsetVector;*/
-
             noteTransform.position = Vector2.MoveTowards(noteTransform.position, targetEnemy.transform.position, Time.deltaTime * trackSpeed);
+            
+            Vector3 dir = targetEnemy.transform.position - noteTransform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            if(noteTransform.position.x < targetEnemy.transform.position.x)transform.rotation = Quaternion.Euler(0f, 0f, angle);
+            else transform.rotation = Quaternion.Euler(0f, 0f, angle + 180f);
 
-            //// Move projectile
-            //Vector2 nextPos = Vector2.MoveTowards(noteTransform.position, targetEnemy.transform.position, Time.deltaTime * trackSpeed);
-            //noteTransform.position = nextPos + waveOffsetVector;
-
-            //// Optional: Rotate to face target
-            //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            //noteTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
         else
         {
@@ -85,6 +67,20 @@ public class trackingEnemy : MonoBehaviour
             //{
             //    noteTransform.right = idleDirection;
             //}
+            
+                noteVec2 = new Vector2(noteTransform.position.x, noteTransform.position.y);
+            if(!pickedLoc)
+            {
+                randomPoint = noteVec2 + (Random.insideUnitCircle.normalized * idleRad);
+                pickedLoc = true;
+            }
+            noteTransform.position = Vector2.MoveTowards(noteTransform.position, randomPoint, Time.deltaTime * 1f);
+            //Vector3 dir = randomPoint - noteVec2;
+            //float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            //if (noteTransform.position.x < targetEnemy.transform.position.x) transform.rotation = Quaternion.Euler(0f, 0f, angle);
+            //else transform.rotation = Quaternion.Euler(0f, 0f, angle + 180f);
+
+
             noteSize -= (despawnSize * Time.deltaTime);
             noteTransform.localScale = new Vector2(noteSize, noteSize);
 
@@ -95,17 +91,9 @@ public class trackingEnemy : MonoBehaviour
                 despawner = 0;
                 noteSize = 1;
             };
+
         }
-
-
-
-      
-
-
-
-        //Vector3 dir = targetEnemy.transform.position - noteTransform.position;
-        //float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        //noteTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        
     }
 
     GameObject FindNearestEnemyInRange()
@@ -134,11 +122,48 @@ public class trackingEnemy : MonoBehaviour
         {
             poolManager.ReturnObjectToPool(this.gameObject);
             Debug.Log($"Hit enemy: {collision.gameObject.name}");
-
-            //adding and Removing
-
-            //poolManager.SpawnObject(collision.gameObject, collision.gameObject.transform.position, Quaternion.identity, poolManager.PoolType.GameObject);
-            //poolManager.ReturnObjectToPool(collision.gameObject);
         }
     }
+
+    //private Vector2 WaveAnimation(Vector2 currentNotePos, Vector2 enemyPos)
+    //{
+    //    Vector2 A = currentNotePos;
+    //    Vector2 B = enemyPos;
+    //    //float arccosUP = (A.x * B.x) + (A.y * B.y);
+    //    //float arccosDown1 = Mathf.Pow((A.x*A.x) + (A.y* A.y), 1f/3f);
+    //    //float arccosDown2 = Mathf.Pow((B.x * B.x) + (B.y * B.y), 1f / 3f);
+    //    //float directAngle = arccosUP / (arccosDown1 * arccosDown2);
+    //    float directAngle = 3f;
+    //    Debug.Log(directAngle);
+    //    float rotateXPos = (A.x) * Mathf.Cos(directAngle) + (A.y) * Mathf.Sin(directAngle);
+    //    float rotateYPos = -(A.x) * Mathf.Sin(directAngle) + (A.y) * Mathf.Cos(directAngle);
+
+    //    Vector2 Wave = new Vector2(rotateXPos, rotateYPos);
+    //    return Wave;
+
+    //}
+
+    //private Vector2 WaveAnimation2(Vector2 currentNotePos, Vector2 targetPos)
+    //{
+    //    Vector2 direction = (targetPos - currentNotePos).normalized;
+    //    Vector2 perpendicular = new Vector2(-direction.y, direction.x); // Perpendicular to direction
+    //    float waveOffset = Mathf.Sin(Time.time * waveFrequency) * waveAmplitude;
+
+    //    return currentNotePos + perpendicular * waveOffset;
+    //}
+
+    //private Vector2 WaveAnimation3(Vector2 currentPos, Vector2 targetPos, float elapsedTime)
+    //{
+    //    Vector2 direction = (targetPos - currentPos).normalized;
+    //    Vector2 perpendicular = new Vector2(-direction.y, direction.x);
+
+    //    // Move forward toward the target
+    //    Vector2 forwardStep = direction * trackSpeed * Time.deltaTime;
+
+    //    // Apply wave offset perpendicular to direction of travel
+    //    float waveOffset = Mathf.Sin(elapsedTime * waveFrequency) * waveAmplitude;
+    //    Vector2 waveStep = perpendicular * waveOffset;
+
+    //    return currentPos + forwardStep + waveStep;
+    //}
 }

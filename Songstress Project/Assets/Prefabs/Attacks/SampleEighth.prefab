@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6166644013199797400}
   - component: {fileID: 5669076104852836870}
   - component: {fileID: -3257017335425960714}
+  - component: {fileID: 727923792972888076}
   m_Layer: 7
   m_Name: SampleEighth
   m_TagString: Note Attacks
@@ -167,3 +168,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackSpeed: 10
   trackingRange: 15
+  waveAmplitude: 0.00005
+  waveFrequency: 0.0001
+--- !u!95 &727923792972888076
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592450161287976347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cc9387badfee8014b9c5bd4615c59e11, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
