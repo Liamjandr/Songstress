@@ -32,7 +32,6 @@ public class NoteCreate : MonoBehaviour
     //float testTime = 0f;
     bool chargedChecker = false;
     bool isKeypressed = false;*/
-
     void Start()
     {
         MCtransform = GetComponent<Transform>();
@@ -72,10 +71,47 @@ public class NoteCreate : MonoBehaviour
     //Instantiating objects and at the same time storing it in an object pool.
     void attackKeys(Vector3 notePlacement)
     {
-        if (Input.GetKey("1")) poolManager.SpawnObject(SampleNote, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-        if (Input.GetKeyUp("2")) poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-        if (Input.GetKeyUp("3")) poolManager.SpawnObject(SampleQuarter, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-        if (Input.GetKeyUp("4")) poolManager.SpawnObject(SampleHalf, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+        if (Input.GetKeyUp("1")) { 
+            poolManager.SpawnObject(SampleNote, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            SoundManager.PlayKalimba(Kalimba.kal_C5);
+        }
+        if (Input.GetKeyUp("2")) { 
+            poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            SoundManager.PlayKalimba(Kalimba.kal_D5);
+        }
+        if (Input.GetKeyUp("3")) { 
+            poolManager.SpawnObject(SampleQuarter, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            SoundManager.PlayKalimba(Kalimba.kal_E5);
+        }
+        if (Input.GetKeyUp("4")) { 
+            poolManager.SpawnObject(SampleHalf, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            SoundManager.PlayKalimba(Kalimba.kal_F5);
+        }
+        if (Input.GetKeyUp("5"))
+        {
+            poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            SoundManager.PlayKalimba(Kalimba.kal_G5);
+        }
+        if (Input.GetKeyUp("6"))
+        {
+            poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            SoundManager.PlayKalimba(Kalimba.kal_A5);
+        }
+        if (Input.GetKeyUp("7"))
+        {
+            poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            SoundManager.PlayKalimba(Kalimba.kal_B5);
+        }
+        if (Input.GetKeyUp("8"))
+        {
+            poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            SoundManager.PlayKalimba(Kalimba.kal_C6);
+        }
+        if (Input.GetKeyUp("9"))
+        {
+            poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            SoundManager.PlayKalimba(Kalimba.kal_D6);
+        }
     }
 
     //Player's Collision on Detecting Enemies within Attack Range.
