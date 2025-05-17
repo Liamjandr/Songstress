@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 1215779894}
   m_Layer: 0
   m_Name: theater_0
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 2025054760}
   m_Layer: 0
   m_Name: 2DCollider
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,7 +369,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 19.95838, y: 1.3555632}
   m_EdgeRadius: 0
---- !u!1001 &9021257710646006315
+--- !u!1001 &2060702815
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -417,37 +417,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4296393981500307490, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_Size.x
-      value: 0.74528646
-      objectReference: {fileID: 0}
-    - target: {fileID: 4296393981500307490, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_Size.y
-      value: 1.4222232
-      objectReference: {fileID: 0}
-    - target: {fileID: 4296393981500307490, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.038528442
-      objectReference: {fileID: 0}
-    - target: {fileID: 4296393981500307490, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.35108012
-      objectReference: {fileID: 0}
     - target: {fileID: 5367784728512310098, guid: f68c7cc78ae7485438194be683d20896, type: 3}
       propertyPath: m_Name
       value: Hutao
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163010424754129796, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_Radius
-      value: 0.39530706
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163010424754129796, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.028886676
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163010424754129796, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.41888
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -460,4 +432,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 619394802}
   - {fileID: 1215779895}
-  - {fileID: 9021257710646006315}
+  - {fileID: 2060702815}
