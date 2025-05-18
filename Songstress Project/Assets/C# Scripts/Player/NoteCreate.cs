@@ -15,6 +15,10 @@ public class NoteCreate : MonoBehaviour
     [SerializeField] private GameObject SampleQuarter;
     [SerializeField] private GameObject SampleHalf;
     [SerializeField] private GameObject Charged_1;
+    [SerializeField] private GameObject Charged_2;
+    [SerializeField] private GameObject Charged_3;
+    [SerializeField] private GameObject Charged_4;
+    [SerializeField] private GameObject Charged_5;
 
     private GameObject Enemy;
     private Transform MCtransform;
@@ -25,13 +29,15 @@ public class NoteCreate : MonoBehaviour
     //Ground Checker
     Movement movement;
     private bool grounded;
-   
+    
     private bool RangeChecker = false;
-    /*private float pressedTimer = 0.1f;
+
+    private float pressedTimer = 0.2f;
     private float timePressed = 0f;
-    //float testTime = 0f;
-    bool chargedChecker = false;
+    bool[] keyChecker = new bool[9];
+ /*   bool chargedChecker = false;
     bool isKeypressed = false;*/
+
     void Start()
     {
         MCtransform = GetComponent<Transform>();
@@ -40,6 +46,8 @@ public class NoteCreate : MonoBehaviour
     {
         movement = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
         if (RangeChecker == false) Debug.Log("Nah I'd Wave");
+
+        for (int i = 0; i < keyChecker.Length; i++) { keyChecker[i] = false; }
     }
 
     void Update()
@@ -48,18 +56,40 @@ public class NoteCreate : MonoBehaviour
         else{if (OffsetX > 0) { }else OffsetX *= -1;}
         notePlacement = new Vector3(MCtransform.position.x + OffsetX, MCtransform.position.y + OffsetY, 0);
 
+        
+        //kahlil
         grounded = movement.grounded;
         if (grounded)
         {
-            if (Input.GetKeyUp("1") && Input.GetKeyUp("2")) poolManager.SpawnObject(Charged_1, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            else attackKeys(notePlacement);
+            InputChecker();
+
+            if (Input.GetKey("1") || Input.GetKey("2") || Input.GetKey("3") || Input.GetKey("4") || Input.GetKey("5") || Input.GetKey("6") || Input.GetKey("7") || Input.GetKey("8") || Input.GetKey("8") || Input.GetKey("9"))
+            {
+                timePressed += Time.deltaTime;
+                if(Input.GetKeyUp("1") && Input.GetKeyUp("2")) poolManager.SpawnObject(Charged_1, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+
+            }
+            else { timePressed = 0f; }
+            if(timePressed < pressedTimer) attackKeys(notePlacement);
         }
         //chargedChecker = false;
 
     }
 
-
-
+    private bool[] InputChecker()
+    {
+        bool[] inputKeys = new bool[9];
+        if (Input.GetKey("1")) inputKeys[0] = true;
+        if (Input.GetKey("2")) inputKeys[1] = true;
+        if (Input.GetKey("3")) inputKeys[2] = true;
+        if (Input.GetKey("4")) inputKeys[3] = true;
+        if (Input.GetKey("5")) inputKeys[4] = true;
+        if (Input.GetKey("6")) inputKeys[5] = true;
+        if (Input.GetKey("7")) inputKeys[6] = true;
+        if (Input.GetKey("8")) inputKeys[7] = true;
+        if (Input.GetKey("9")) inputKeys[8] = true;
+        return inputKeys;
+    }
 
     private bool ChargedAttack(Vector3 notePlacement)
     {

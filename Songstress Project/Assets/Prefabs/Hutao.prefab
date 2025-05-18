@@ -50,6 +50,10 @@ MonoBehaviour:
   SampleQuarter: {fileID: 655759431329109156, guid: 56608176dd79da742bea38e2bad004c6, type: 3}
   SampleHalf: {fileID: 7890250029138819465, guid: d190b61646eebfb478eb957926af8c4b, type: 3}
   Charged_1: {fileID: 5858485987559529416, guid: 1cdaa7c147ab3234bb936d81f2c2cc18, type: 3}
+  Charged_2: {fileID: 6148646808263481053, guid: d5a185957e433bf44bc66be9405837bb, type: 3}
+  Charged_3: {fileID: 960538211248024160, guid: daf1dbff5d0cc93408969688073215c3, type: 3}
+  Charged_4: {fileID: 1717028703786239109, guid: d31a5531049548b4dabdae7479132c65, type: 3}
+  Charged_5: {fileID: 292340302322755104, guid: 36594cc3ffcbb55438679b90fdd590dd, type: 3}
 --- !u!1 &4246091131196410332
 GameObject:
   m_ObjectHideFlags: 0
