@@ -4,6 +4,9 @@ using UnityEngine;
 using Unity.VisualScripting;
 using static UnityEngine.EventSystems.EventTrigger;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine.UIElements;
+using System.Collections.Generic;
+using System.Collections;
 
 public class NoteCreate : MonoBehaviour
 {
@@ -29,14 +32,13 @@ public class NoteCreate : MonoBehaviour
     //Ground Checker
     Movement movement;
     private bool grounded;
-    
     private bool RangeChecker = false;
+    
+    //combo Checker
+    private float comboWindow = 0.24f;
+    private List<int> currentCombo = new List<int>();
+    private float comboTimer = 0f;
 
-    private float pressedTimer = 0.2f;
-    private float timePressed = 0f;
-    bool[] keyChecker = new bool[9];
- /*   bool chargedChecker = false;
-    bool isKeypressed = false;*/
 
     void Start()
     {
@@ -47,7 +49,6 @@ public class NoteCreate : MonoBehaviour
         movement = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
         if (RangeChecker == false) Debug.Log("Nah I'd Wave");
 
-        for (int i = 0; i < keyChecker.Length; i++) { keyChecker[i] = false; }
     }
 
     void Update()
@@ -56,49 +57,66 @@ public class NoteCreate : MonoBehaviour
         else{if (OffsetX > 0) { }else OffsetX *= -1;}
         notePlacement = new Vector3(MCtransform.position.x + OffsetX, MCtransform.position.y + OffsetY, 0);
 
-        
-        //kahlil
+       
         grounded = movement.grounded;
         if (grounded)
         {
             InputChecker();
+            bool ComboActivate = false;
 
             if (Input.GetKey("1") || Input.GetKey("2") || Input.GetKey("3") || Input.GetKey("4") || Input.GetKey("5") || Input.GetKey("6") || Input.GetKey("7") || Input.GetKey("8") || Input.GetKey("8") || Input.GetKey("9"))
             {
-                timePressed += Time.deltaTime;
-                if(Input.GetKeyUp("1") && Input.GetKeyUp("2")) poolManager.SpawnObject(Charged_1, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-
+                comboTimer += Time.deltaTime;
             }
-            else { timePressed = 0f; }
-            if(timePressed < pressedTimer) attackKeys(notePlacement);
+            //combo
+
+            if (currentCombo.Count > 0 && (!Input.GetKey("1") && !Input.GetKey("2") && !Input.GetKey("3") && !Input.GetKey("4") && !Input.GetKey("5") && !Input.GetKey("6") && !Input.GetKey("7") && !Input.GetKey("8") && !Input.GetKey("8") && !Input.GetKey("9")))
+            {              
+                if (comboTimer >= comboWindow)
+                {
+                    ComboActivate = ChargedAttack(notePlacement, currentCombo);
+                    currentCombo.Clear();
+                    comboTimer = 0f;
+                }
+            }
+
+            
+            attackKeys(notePlacement);
+
         }
-        //chargedChecker = false;
-
     }
-
-    private bool[] InputChecker()
+    private void InputChecker()
     {
-        bool[] inputKeys = new bool[9];
-        if (Input.GetKey("1")) inputKeys[0] = true;
-        if (Input.GetKey("2")) inputKeys[1] = true;
-        if (Input.GetKey("3")) inputKeys[2] = true;
-        if (Input.GetKey("4")) inputKeys[3] = true;
-        if (Input.GetKey("5")) inputKeys[4] = true;
-        if (Input.GetKey("6")) inputKeys[5] = true;
-        if (Input.GetKey("7")) inputKeys[6] = true;
-        if (Input.GetKey("8")) inputKeys[7] = true;
-        if (Input.GetKey("9")) inputKeys[8] = true;
-        return inputKeys;
+        if (!currentCombo.Contains(1)) if (Input.GetKey("1")) currentCombo.Add(1);
+        if (!currentCombo.Contains(2)) if (Input.GetKey("2")) currentCombo.Add(2);
+        if (!currentCombo.Contains(3)) if (Input.GetKey("3")) currentCombo.Add(3);
+        if (!currentCombo.Contains(4)) if (Input.GetKey("4")) currentCombo.Add(4);
+        if (!currentCombo.Contains(5)) if (Input.GetKey("5")) currentCombo.Add(5);
+        if (!currentCombo.Contains(6)) if (Input.GetKey("6")) currentCombo.Add(6);
+        if (!currentCombo.Contains(7)) if (Input.GetKey("7")) currentCombo.Add(7);
+        if (!currentCombo.Contains(8)) if (Input.GetKey("8")) currentCombo.Add(8);
+        if (!currentCombo.Contains(9)) if (Input.GetKey("9")) currentCombo.Add(9);
     }
 
-    private bool ChargedAttack(Vector3 notePlacement)
+    private bool ChargedAttack(Vector3 notePlacement, List<int> comboKeys)
     {
-        Debug.Log("The Attack Keys Are Being Pressed");
-        if (Input.anyKey == true) return true;
-        else return false;
+        if (comboKeys.Contains(1) && comboKeys.Contains(2) && comboKeys.Count == 2)
+        {
+            Debug.Log("Combo CA1 got triggered ");
+            poolManager.SpawnObject(Charged_1, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
+            return true;
+        }
+
+        if (comboKeys.Contains(1) && comboKeys.Contains(3) && comboKeys.Contains(5) && comboKeys.Count == 3)
+        {
+            Debug.Log("Combo CA2 got triggered ");
+            poolManager.SpawnObject(Charged_2, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);        
+            return true;
+        }
+
+        return false;
     }
 
-    //Instantiating objects and at the same time storing it in an object pool.
     void attackKeys(Vector3 notePlacement)
     {
         if (Input.GetKeyUp("1")) { 
@@ -143,56 +161,4 @@ public class NoteCreate : MonoBehaviour
             SoundManager.PlayKalimba(Kalimba.kal_D6);
         }
     }
-
-    //Player's Collision on Detecting Enemies within Attack Range.
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 9) RangeChecker = true;
-        Debug.Log("Enemies are in Range!");
-        Debug.Log("The Enemy is " + collision.gameObject.tag);
-        Enemy = collision.gameObject;
-        //Debug.Log(collision.gameObject.transform);
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 9)
-        {
-            //RangeChecker = true;
-
-            Enemy = collision.gameObject;
-            //Debug.Log(collision.gameObject.transform.position);
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 9) RangeChecker = false;
-        Debug.Log("Enemies are out of Range!");
-    }
-
-
-    /*if (Input.GetKeyDown("1"))
-        {
-            //if(Input.anyKey == true) ChargedAttack(notePlacement);
-            timePressed = Time.time;
-            isKeypressed = true;
-            if (chargedChecker == false) attackKeys(notePlacement);
-        }
-
-        if (isKeypressed && Input.GetKey("1"))
-        {
-            if ((Time.time - timePressed) >= pressedTimer)
-            {
-                Debug.Log("Key is now Pressed");
-                chargedChecker = true;
-            }
-        }
-
-        //Debug.Log(Time.time - timePressed);
-
-        if (Input.GetKey("1") && chargedChecker == false)
-        {
-            isKeypressed = false;
-        }*/
-    
 }
