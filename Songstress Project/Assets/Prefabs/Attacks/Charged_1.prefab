@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 650222269491945644}
   m_Layer: 7
   m_Name: Charged_1
-  m_TagString: Note Attacks
+  m_TagString: Charged Attacks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,3 +167,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackSpeed: 10
   trackingRange: 15
+  waveAmplitude: 0.00005
+  waveFrequency: 0.0001

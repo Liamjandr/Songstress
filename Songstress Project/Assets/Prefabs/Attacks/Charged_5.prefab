@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7976694648687599698}
   m_Layer: 7
   m_Name: Charged_5
-  m_TagString: Note Attacks
+  m_TagString: Charged Attacks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,6 +7,7 @@ TagManager:
   - RadWorm
   - Ground
   - Note Attacks
+  - Charged Attacks
   layers:
   - Default
   - TransparentFX

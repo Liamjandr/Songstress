@@ -27,5 +27,10 @@ public class enemy : MonoBehaviour
             Debug.Log("Got Hit by " + collision.gameObject.tag);
             overwhelm++;
         }
+        if (collision.gameObject.CompareTag("Charged Attacks"))
+        {
+            Debug.Log("Got Hit by " + collision.gameObject.tag);
+            overwhelm += 50;
+        }
     }
 }

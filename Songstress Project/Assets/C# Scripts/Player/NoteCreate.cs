@@ -35,10 +35,11 @@ public class NoteCreate : MonoBehaviour
     private bool RangeChecker = false;
     
     //combo Checker
-    private float comboWindow = 0.24f;
+    private float comboWindow = 0.12f;
     private List<int> currentCombo = new List<int>();
     private float comboTimer = 0f;
 
+    private float comboCooldown = 0f;
 
     void Start()
     {
@@ -72,15 +73,16 @@ public class NoteCreate : MonoBehaviour
 
             if (currentCombo.Count > 0 && (!Input.GetKey("1") && !Input.GetKey("2") && !Input.GetKey("3") && !Input.GetKey("4") && !Input.GetKey("5") && !Input.GetKey("6") && !Input.GetKey("7") && !Input.GetKey("8") && !Input.GetKey("8") && !Input.GetKey("9")))
             {              
-                if (comboTimer >= comboWindow)
+                if (comboTimer >= comboWindow && comboCooldown <= 0f)
                 {
                     ComboActivate = ChargedAttack(notePlacement, currentCombo);
                     currentCombo.Clear();
                     comboTimer = 0f;
                 }
             }
+            if (ComboActivate) comboCooldown += 5f;
+            if(comboCooldown > 0f) comboCooldown -= Time.deltaTime;
 
-            
             attackKeys(notePlacement);
 
         }
