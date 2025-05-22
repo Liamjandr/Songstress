@@ -16,7 +16,7 @@ public enum Kalimba{
 [RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] kalimbaClips;
+    [SerializeField] private AudioClip[] kalimbaClips = new AudioClip[9];
 
     private static SoundManager instance;
     private AudioSource audioSource;
