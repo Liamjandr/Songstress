@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 49ed025d2e0614f4c8548f11b4d0b25d
+guid: 9595462e4a5e51f49a82d19a376635f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1982949654433504815
-    second: Forest_parallax_0
+      213: 1865918681875453420
+    second: Forest#4_BG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,73 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Forest_parallax_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 540
-        width: 420
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d1e100abc52b74e0800000000000000
-      internalID: -1982949654433504815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Forest_parallax_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 360
-        width: 420
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f807784fcd49e3f49aa5e77c12188284
-      internalID: -109378989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Forest_parallax_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 180
-        width: 420
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93b4def6812af3a40b7688cdc1966f5b
-      internalID: -2009879863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Forest_parallax_3
+      name: Forest#4_BG_0
       rect:
         serializedVersion: 2
         x: 0
@@ -192,10 +139,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 58357484f8f176a429abab65059dd1e3
-      internalID: -1039775292
+      spriteID: ce593f4b72315e910800000000000000
+      internalID: 1865918681875453420
       vertices: []
       indices: 
       edges: []
@@ -204,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3d5cd5caf168e314a8d9d52387b191ac
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -214,10 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Forest_parallax_0: -1982949654433504815
-      Forest_parallax_1: -109378989
-      Forest_parallax_2: -2009879863
-      Forest_parallax_3: -1039775292
+      Forest#4_BG_0: 1865918681875453420
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
