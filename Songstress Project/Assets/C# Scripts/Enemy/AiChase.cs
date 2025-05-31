@@ -7,9 +7,11 @@ public class AiChase : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private float distance;
+    private MeleeEnemy meleeEnemy;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        meleeEnemy = GetComponent<MeleeEnemy>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (player == null)
@@ -26,29 +28,41 @@ public class AiChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-
-        if (player != null)
-        {
-            // Get current and target positions
-            Vector2 currentPos = transform.position;
-            Vector2 targetPos = new Vector2(player.position.x, currentPos.y); // lock Y axis
-
-            // Move toward player (X axis only)
-            transform.position = Vector2.MoveTowards(currentPos, targetPos, speed * Time.deltaTime);
-            animator.SetBool("Walking", direction.magnitude > 0.01f);
-
-            if (player.position.x < transform.position.x)
-                transform.localScale = new Vector3(-1.1f, 1.1f, 1.1f); // Face left
-            else
-                transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);  // Face right
-        }
-        else
+        if (player == null)
         {
             animator.SetBool("Walking", false);
+            return;
         }
-        
+
+        // Stop moving if attacking
+        if (meleeEnemy != null && meleeEnemy.isAttacking)
+        {
+            animator.SetBool("Walking", false);
+            return;
+        }
+
+        // Stop moving if player is not in line of sight
+        if (meleeEnemy != null && !meleeEnemy.HasLineOfSight()) 
+        {
+            animator.SetBool("Walking", false);
+            return;
+        }
+
+        // Continue chasing the player
+        Vector2 currentPos = transform.position;
+        Vector2 targetPos = new Vector2(player.position.x, currentPos.y); // lock Y axis
+
+        transform.position = Vector2.MoveTowards(currentPos, targetPos, speed * Time.deltaTime);
+
+        Vector2 direction = player.position - transform.position;
+        animator.SetBool("Walking", direction.magnitude > 0.01f);
+
+        // Flip sprite
+        if (player.position.x < transform.position.x)
+            transform.localScale = new Vector3(-1.1f, 1.1f, 1.1f); // Face left
+        else
+            transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);  // Face right
+
 
     }
     
