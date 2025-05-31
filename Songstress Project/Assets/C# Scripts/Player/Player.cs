@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public Image HealthBar;
     [SerializeField] private float HPThreshold = 106f;
     private float playerHP;
-    private float RadWorm = 6f;
+    private float Enemy = 6f;
     public GameObject player;
     //Passive Health
     private float regenCD = 5f;
@@ -77,14 +77,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(float damageAmount)
     {
-        if (collision.gameObject.CompareTag("RadWorm"))
-        {
-            playerHP -= RadWorm;
-            //Debug.Log(regenTimer);
-            if (regenTimer <= regenCD) regenTimer += regenCD;
-        }
+        playerHP -= damageAmount;
+        regenTimer = regenCD;
+        Debug.Log("Player took damage: " + damageAmount);
     }
 
 }

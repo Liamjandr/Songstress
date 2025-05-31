@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Skeleton
   - RadWorm
+  - Enemy
   layers:
   - Default
   - TransparentFX

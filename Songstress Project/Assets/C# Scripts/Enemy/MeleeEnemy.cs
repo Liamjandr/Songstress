@@ -10,6 +10,8 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float lineOfSightLength = 5f;
     [SerializeField] private LayerMask obstacleLayer;
+    [SerializeField] private int damage = 10;
+
 
     private float cooldownTimer = Mathf.Infinity;
     private Transform player;
@@ -83,6 +85,17 @@ public class MeleeEnemy : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, lineOfSightLength, playerLayer | obstacleLayer);
 
         return hit.collider != null && hit.collider.CompareTag("Player");
+    }
+    public void DamagePlayer()
+    {
+        if (PlayerInSight() && HasLineOfSight())
+        {
+            Player playerScript = player.GetComponent<Player>();
+            if (playerScript != null)
+            {
+                playerScript.TakeDamage(damage);
+            }
+        }
     }
 
 

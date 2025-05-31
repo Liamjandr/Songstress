@@ -19903,7 +19903,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
-  lineOfSightLength: 6.5
+  lineOfSightLength: 11.1
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -20557,11 +20557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2579903181151523245, guid: 5696599111cb0454f87044fa1ea8a3a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.2
+      value: -20.81
       objectReference: {fileID: 0}
     - target: {fileID: 2579903181151523245, guid: 5696599111cb0454f87044fa1ea8a3a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.22
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 2579903181151523245, guid: 5696599111cb0454f87044fa1ea8a3a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20622,6 +20622,10 @@ PrefabInstance:
     - target: {fileID: 8979954326385967880, guid: 5696599111cb0454f87044fa1ea8a3a3, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979954326385967880, guid: 5696599111cb0454f87044fa1ea8a3a3, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
