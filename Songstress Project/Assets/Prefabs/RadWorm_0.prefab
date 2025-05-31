@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7551248268447084985}
   - component: {fileID: 2897380874521417204}
   - component: {fileID: 491125624431493413}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: RadWorm_0
   m_TagString: RadWorm
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -187,10 +187,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5848987341399037565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 957c5c1402b85344384866feec92b883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5367784728512310098, guid: f68c7cc78ae7485438194be683d20896, type: 3}
+  player: {fileID: 2877178630882806308, guid: f68c7cc78ae7485438194be683d20896, type: 3}
   speed: 10
