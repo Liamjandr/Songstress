@@ -7,6 +7,11 @@ TagManager:
   - RadWorm
   - Ground
   - Note Attacks
+<<<<<<< Updated upstream
+=======
+  - Charged Attacks
+  - Skeleton
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
