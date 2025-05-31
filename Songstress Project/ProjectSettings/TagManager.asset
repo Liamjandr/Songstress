@@ -7,7 +7,11 @@ TagManager:
   - RadWorm
   - Ground
   - Note Attacks
+<<<<<<< Updated upstream
+=======
   - Charged Attacks
+  - Skeleton
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -42,29 +46,8 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: BG
-    uniqueID: 3812349287
-    locked: 0
-  - name: Parallax 1
-    uniqueID: 4159952437
-    locked: 0
-  - name: Parallax 2
-    uniqueID: 3513477351
-    locked: 0
-  - name: Parallax 3
-    uniqueID: 2989814221
-    locked: 0
-  - name: Parallax 4
-    uniqueID: 822270137
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Ground
-    uniqueID: 20110809
-    locked: 0
-  - name: Player
-    uniqueID: 4135303611
     locked: 0
   m_RenderingLayers:
   - Default
