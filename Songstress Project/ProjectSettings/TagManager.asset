@@ -3,27 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - RadWorm
-  - Ground
-  - Note Attacks
-<<<<<<< Updated upstream
-=======
-  - Charged Attacks
-  - Skeleton
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Player
-  - Note Projectile
   - 
   - 
-  - Enemy
+  - 
+  - 
+  - 
   - 
   - 
   - 
