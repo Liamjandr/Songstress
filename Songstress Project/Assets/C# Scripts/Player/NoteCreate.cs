@@ -32,7 +32,7 @@ public class NoteCreate : MonoBehaviour
     //Ground Checker
     Movement movement;
     private bool grounded;
-    private bool RangeChecker = false;
+    //private bool RangeChecker = false;
     
     //combo Checker
     private float comboWindow = 0.12f;
@@ -48,7 +48,7 @@ public class NoteCreate : MonoBehaviour
     private void Awake()
     {
         movement = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
-        if (RangeChecker == false) Debug.Log("Nah I'd Wave");
+        //if (RangeChecker == false) Debug.Log("Nah I'd Wave");
 
     }
 

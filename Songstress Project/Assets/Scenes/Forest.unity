@@ -753,7 +753,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5881170029344037979, guid: aebd0dc441d645d43b8bb7722b4eb3cb, type: 3}
       propertyPath: m_Name
-      value: SoundManager
+      value: Kalimba
       objectReference: {fileID: 0}
     - target: {fileID: 8303667730631417581, guid: aebd0dc441d645d43b8bb7722b4eb3cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19621,10 +19621,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 3484358050755857134}
-    - target: {fileID: 8566970267284355994, guid: 9a2cd118249ca554c9f0f0a980553088, type: 3}
-      propertyPath: m_ScaleFactor
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 9128806740089098550, guid: 9a2cd118249ca554c9f0f0a980553088, type: 3}
       propertyPath: m_Pivot.x
       value: 0

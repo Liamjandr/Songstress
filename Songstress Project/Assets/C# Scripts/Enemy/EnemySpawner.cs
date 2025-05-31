@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < setSpawn.Length; i++)
         {
             poolManager.SpawnObject(Enemies[0], setSpawn[i], Quaternion.identity, poolManager.PoolType.GameObject);
-            Debug.Log(poolManager.PoolType.GameObject);
+            //Debug.Log(poolManager.PoolType.GameObject);
         }    
     }
 

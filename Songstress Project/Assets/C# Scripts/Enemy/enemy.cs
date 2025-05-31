@@ -24,12 +24,12 @@ public class enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Note Attacks"))
         {
-            Debug.Log("Got Hit by " + collision.gameObject.tag);
+            //Debug.Log("Got Hit by " + collision.gameObject.tag);
             overwhelm++;
         }
         if (collision.gameObject.CompareTag("Charged Attacks"))
         {
-            Debug.Log("Got Hit by " + collision.gameObject.tag);
+            //Debug.Log("Got Hit by " + collision.gameObject.tag);
             overwhelm += 50;
         }
     }

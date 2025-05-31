@@ -306,7 +306,7 @@ CompositeCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -524,6 +524,7 @@ MonoBehaviour:
   animator: {fileID: 350380610227484632}
   HealthBar: {fileID: 0}
   HPThreshold: 106
+  player: {fileID: 5367784728512310098}
 --- !u!114 &8172184684655049966
 MonoBehaviour:
   m_ObjectHideFlags: 0

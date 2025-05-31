@@ -59,11 +59,6 @@ public class trackingEnemy : MonoBehaviour
                 pickedLoc = true;
             }
             noteTransform.position = Vector2.MoveTowards(noteTransform.position, randomPoint, Time.deltaTime * 1f);
-            //Vector3 dir = randomPoint - noteVec2;
-            //float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            //if (noteTransform.position.x < targetEnemy.transform.position.x) transform.rotation = Quaternion.Euler(0f, 0f, angle);
-            //else transform.rotation = Quaternion.Euler(0f, 0f, angle + 180f);
-
 
             noteSize -= (despawnSize * Time.deltaTime);
             noteTransform.localScale = new Vector2(noteSize, noteSize);
@@ -105,7 +100,7 @@ public class trackingEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("RadWorm"))
         {
             poolManager.ReturnObjectToPool(this.gameObject);
-            Debug.Log($"Hit enemy: {collision.gameObject.name}");
+            //Debug.Log($"Hit enemy: {collision.gameObject.name}");
         }
     }
 }
