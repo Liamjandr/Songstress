@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1163675187713399821}
   - component: {fileID: 595347177923368689}
   - component: {fileID: 253226030985080946}
-  - component: {fileID: 6387278235434774157}
   m_Layer: 7
   m_Name: Charged_2
   m_TagString: Charged Attacks
@@ -153,19 +152,3 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.002781704}
   m_Radius: 0.24508773
---- !u!114 &6387278235434774157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6148646808263481053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c791bdcc351a44d8d152b850c173e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trackSpeed: 10
-  trackingRange: 15
-  waveAmplitude: 0.00005
-  waveFrequency: 0.0001

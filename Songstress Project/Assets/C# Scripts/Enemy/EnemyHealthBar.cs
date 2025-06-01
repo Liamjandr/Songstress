@@ -11,7 +11,6 @@ public class EnemyHealthBar : MonoBehaviour
 
     void Start()
     {
-        hp = new EnemyHP();
         hp = GetComponentInParent<EnemyHP>();
     }
 
