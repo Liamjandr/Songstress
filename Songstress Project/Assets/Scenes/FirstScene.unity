@@ -300,7 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215779895}
   - component: {fileID: 1215779894}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: theater_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2025054759}
   - component: {fileID: 2025054760}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 2DCollider
   m_TagString: Ground
   m_Icon: {fileID: 0}
