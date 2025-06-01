@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 853701948832133167}
   - component: {fileID: 8172184684655049966}
   - component: {fileID: 350380610227484632}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Hutao
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2917795296415379658, guid: 4131ee51f50b50e49ba2c6e6575010cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -224,7 +224,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -545,7 +545,7 @@ MonoBehaviour:
   groundRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
 --- !u!95 &350380610227484632
 Animator:
   serializedVersion: 7

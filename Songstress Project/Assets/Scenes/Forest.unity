@@ -47183,10 +47183,6 @@ PrefabInstance:
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 713063136}
-    - target: {fileID: 853701948832133167, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: HPThreshold
-      value: 106
-      objectReference: {fileID: 0}
     - target: {fileID: 2877178630882806308, guid: f68c7cc78ae7485438194be683d20896, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.6
@@ -47227,29 +47223,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3658788601531394408, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4296393981500307490, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5367784728512310098, guid: f68c7cc78ae7485438194be683d20896, type: 3}
       propertyPath: m_Name
       value: Hutao
-      objectReference: {fileID: 0}
-    - target: {fileID: 5367784728512310098, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8172184684655049966, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: grounded
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8172184684655049966, guid: f68c7cc78ae7485438194be683d20896, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
