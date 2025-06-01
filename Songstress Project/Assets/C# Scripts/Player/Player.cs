@@ -45,6 +45,13 @@ public class Player : MonoBehaviour
         AttackAnim();
     }
 
+    public void PlayFootstep()
+    {
+        int random = Random.Range(0, 6);
+        Debug.Log(random);
+        FootSteps.PlaySound(random);
+    }
+
     private void healthbar()
     {
         HealthBar.fillAmount = playerHP/HPThreshold;
