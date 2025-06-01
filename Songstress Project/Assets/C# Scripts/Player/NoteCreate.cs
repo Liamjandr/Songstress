@@ -41,6 +41,16 @@ public class NoteCreate : MonoBehaviour
 
     private float comboCooldown = 0f;
 
+    private int Instrument = 3;
+    /*
+    0 - Kalimba
+    1 - E Guitar
+    2 - Guitar
+    3 - Sax
+    4 - Trumpet
+    5 - Djembe
+     
+     */
     void Start()
     {
         MCtransform = GetComponent<Transform>();
@@ -49,7 +59,6 @@ public class NoteCreate : MonoBehaviour
     {
         movement = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
         //if (RangeChecker == false) Debug.Log("Nah I'd Wave");
-
     }
 
     void Update()
@@ -123,44 +132,44 @@ public class NoteCreate : MonoBehaviour
     {
         if (Input.GetKeyUp("1")) { 
             poolManager.SpawnObject(SampleNote, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            SoundManager.PlayKalimba(Kalimba.kal_C5);
+            SoundManager.PlayInstrument(Instrument, Octave.C5);
         }
         if (Input.GetKeyUp("2")) { 
             poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            SoundManager.PlayKalimba(Kalimba.kal_D5);
+            SoundManager.PlayInstrument(Instrument, Octave.D5);
         }
         if (Input.GetKeyUp("3")) { 
             poolManager.SpawnObject(SampleQuarter, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            SoundManager.PlayKalimba(Kalimba.kal_E5);
+            SoundManager.PlayInstrument(Instrument, Octave.E5);
         }
         if (Input.GetKeyUp("4")) { 
             poolManager.SpawnObject(SampleHalf, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            SoundManager.PlayKalimba(Kalimba.kal_F5);
+            SoundManager.PlayInstrument(Instrument, Octave.F5);
         }
         if (Input.GetKeyUp("5"))
         {
             poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            SoundManager.PlayKalimba(Kalimba.kal_G5);
+            SoundManager.PlayInstrument(Instrument, Octave.G5);
         }
         if (Input.GetKeyUp("6"))
         {
             poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            SoundManager.PlayKalimba(Kalimba.kal_A5);
+            SoundManager.PlayInstrument(Instrument, Octave.A5);
         }
         if (Input.GetKeyUp("7"))
         {
             poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            SoundManager.PlayKalimba(Kalimba.kal_B5);
+            SoundManager.PlayInstrument(Instrument, Octave.B5);
         }
         if (Input.GetKeyUp("8"))
         {
             poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            SoundManager.PlayKalimba(Kalimba.kal_C6);
+            SoundManager.PlayInstrument(Instrument, Octave.C6);
         }
         if (Input.GetKeyUp("9"))
         {
             poolManager.SpawnObject(SampleEighth, notePlacement, Quaternion.identity, poolManager.PoolType.GameObject);
-            SoundManager.PlayKalimba(Kalimba.kal_D6);
+            SoundManager.PlayInstrument(Instrument, Octave.D6);
         }
     }
 }

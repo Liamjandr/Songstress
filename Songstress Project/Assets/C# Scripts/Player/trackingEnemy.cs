@@ -77,7 +77,7 @@ public class trackingEnemy : MonoBehaviour
 
     GameObject FindNearestEnemyInRange()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("RadWorm");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         GameObject nearestEnemy = null;
         float minDistance = Mathf.Infinity;
@@ -97,7 +97,7 @@ public class trackingEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("RadWorm"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             poolManager.ReturnObjectToPool(this.gameObject);
             //Debug.Log($"Hit enemy: {collision.gameObject.name}");
