@@ -41,13 +41,13 @@ public class NoteCreate : MonoBehaviour
 
     private float comboCooldown = 0f;
 
-    private int Instrument = 3;
+    private int Instrument = 0;
     /*
     0 - Kalimba
     1 - E Guitar
     2 - Guitar
     3 - Sax
-    4 - Trumpet
+    4 - Harmonica
     5 - Djembe
      
      */
