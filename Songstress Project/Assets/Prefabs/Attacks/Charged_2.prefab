@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1163675187713399821}
   - component: {fileID: 595347177923368689}
   - component: {fileID: 253226030985080946}
+  - component: {fileID: 9060458379054414556}
+  - component: {fileID: 3482732154618036189}
   m_Layer: 7
   m_Name: Charged_2
   m_TagString: Charged Attacks
@@ -78,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3433716947577749884, guid: 34a97d5927c2f264aa55bd70e0349f34, type: 3}
+  m_Sprite: {fileID: 6598672660723340336, guid: 93bc30a4bf8b1fc489a1147f47780546, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,5 +152,39 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.002781704}
-  m_Radius: 0.24508773
+  m_Offset: {x: 0.043222785, y: 0.0027817488}
+  m_Radius: 1.7814664
+--- !u!114 &9060458379054414556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148646808263481053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44d1ad10c1717f42a7ca21ba48bca5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &3482732154618036189
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148646808263481053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8e72b1ee169cb1d45be57ee0878c6bcc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

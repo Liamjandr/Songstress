@@ -6,10 +6,10 @@ public class EnemyHP : MonoBehaviour
 
     public float overwhelm = 1;
     public float enemyHealth = 15;
-
+    private Scoring score;
     void Start()
     {
-        
+        score = FindAnyObjectByType<Scoring>();
     }
 
     // Update is called once per frame
@@ -18,6 +18,7 @@ public class EnemyHP : MonoBehaviour
         if (overwhelm >= enemyHealth)
         {
             poolManager.ReturnObjectToPool(this.gameObject);
+            score.increaseScore(100);
         }
     }
 
