@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 853701948832133167}
   - component: {fileID: 8172184684655049966}
   - component: {fileID: 350380610227484632}
+  - component: {fileID: 1765460476623578235}
   m_Layer: 3
   m_Name: Hutao
   m_TagString: Player
@@ -524,7 +525,10 @@ MonoBehaviour:
   animator: {fileID: 350380610227484632}
   HealthBar: {fileID: 0}
   HPThreshold: 106
+  death: {fileID: 3953684199143357209, guid: 36886e9aa4b5e1a4ba8e1bae77261283, type: 3}
+  deathScreen: {fileID: 0}
   player: {fileID: 5367784728512310098}
+  retry: {fileID: 1765460476623578235}
 --- !u!114 &8172184684655049966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,3 +572,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1765460476623578235
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5367784728512310098}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 70c51a8971bad72438e1f28a6e6e238c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 70c51a8971bad72438e1f28a6e6e238c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0

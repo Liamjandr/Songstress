@@ -7,10 +7,12 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] Animator animator;
-
     //Health Bar
     public Image HealthBar;
     [SerializeField] private float HPThreshold = 106f;
+    public Sprite death;
+    private SpriteRenderer sp;
+    [SerializeField] private GameObject deathScreen;
     private float playerHP;
     private float Enemy = 6f;
     public GameObject player;
@@ -19,7 +21,10 @@ public class Player : MonoBehaviour
     private float regenTimer = 0f;
     private float passiveRegen = 1f;
 
-    float timer = 0f;
+
+    public Animation retry;
+    Movement movement;
+    private bool died = false;
     void Start()
     {
 
@@ -27,12 +32,15 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        sp = GetComponent<SpriteRenderer>();
+        movement = GetComponent<Movement>();
         playerHP = HPThreshold;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (died == false) deathScreen.SetActive(false);
         healthbar();
         AttackAnim();
     }
@@ -52,17 +60,16 @@ public class Player : MonoBehaviour
     }
 
     void PlayerDeath(GameObject player, float hp)
-    {
-        timer += Time.deltaTime;
-        if (hp <= 0)
+    {      
+        if (hp <= 0 && died == false)
         {
-            Destroy(player);
+            movement.enabled = false;
+            animator.SetTrigger("Death");
+            died = true;
+            animator.enabled = false;
+            sp.sprite = death;
+            deathScreen.SetActive(true);
         }
-        //else if (timer > 2f)
-        //{
-        //    Debug.Log(hp);
-        //    timer = 0f;
-        //}
     }
     void AttackAnim()
     {
@@ -83,5 +90,4 @@ public class Player : MonoBehaviour
         regenTimer = regenCD;
         Debug.Log("Player took damage: " + damageAmount);
     }
-
 }
