@@ -4,8 +4,8 @@ public class EnemyHP : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    private int overwhelm = 0;
-    [SerializeField] private int enemyHealth = 100;
+    public float overwhelm = 1;
+    public float enemyHealth = 15;
 
     void Start()
     {
