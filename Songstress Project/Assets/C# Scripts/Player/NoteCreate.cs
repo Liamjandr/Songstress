@@ -7,6 +7,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
 using System.Collections;
+using static InstrummentManager;
 
 public class NoteCreate : MonoBehaviour
 {
@@ -51,9 +52,12 @@ public class NoteCreate : MonoBehaviour
     5 - Djembe
      
      */
+    
     void Start()
     {
         MCtransform = GetComponent<Transform>();
+        Instrument = InstrummentManager.SelectedInstrument;
+        Debug.Log("Instrument: " + Instrument);
     }
     private void Awake()
     {
@@ -95,6 +99,24 @@ public class NoteCreate : MonoBehaviour
             attackKeys(notePlacement);
 
         }
+    }
+    public int InstrumentSelection()
+    {
+        int instrument = InstrummentManager.SelectedInstrument;
+
+        // optional switch for processing:
+        switch (instrument)
+        {
+            case 0: Debug.Log("Kalimba"); break;
+            case 1: Debug.Log("E Guitar"); break;
+            case 2: Debug.Log("Guitar"); break;
+            case 3: Debug.Log("Sax"); break;
+            case 4: Debug.Log("Harmonica"); break;
+            case 5: Debug.Log("Djembe"); break;
+
+        }
+
+        return instrument;
     }
     private void InputChecker()
     {

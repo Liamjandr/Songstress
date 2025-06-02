@@ -9,7 +9,7 @@ public class StartButton : MonoBehaviour
     public string nextSceneName = "SecondScene"; // Change to your actual scene name
     public float delayBeforeSceneSwitch = 2f; // Duration of animation
 
-    private bool clicked = false;
+    private bool clicked = false; 
 
     void OnMouseDown()
     {
