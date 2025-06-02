@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Backstage.unity
     guid: 2f9b06ad77e390240878d536f03600eb
+  - enabled: 1
+    path: Assets/Scenes/YouWin.unity
+    guid: 5a30ca092d12b474b8da82905445bb0e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

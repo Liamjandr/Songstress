@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08204f3f5ef03eb4fb622994897c04fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 400
+  speed: 300
   jumpingHeight: 20
   animator: {fileID: 350380610227484632}
   grounded: 0
