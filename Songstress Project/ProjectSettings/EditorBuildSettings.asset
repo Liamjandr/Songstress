@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartScene.unity
     guid: f4f5ebae84a537648b965e690787fae6
   - enabled: 1
-    path: Assets/Scenes/Forest.unity
-    guid: 0b50e8ee51583df4a80c50ffbb00e40b
-  - enabled: 1
     path: Assets/Scenes/FirstScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: ccf38953b593d0149b0b167723f52025
   - enabled: 1
     path: Assets/Scenes/InstrumentSelection.unity
     guid: 7ade63d7bb40a904eb69850edbcfd029
@@ -21,8 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/About.unity
     guid: 5124627a968b6964bb0837394fc0da99
   - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 0b50e8ee51583df4a80c50ffbb00e40b
+  - enabled: 1
     path: Assets/Scenes/Outsite Theater.unity
     guid: ecf5a083799d1d648ae03f8848330adc
+  - enabled: 1
+    path: Assets/Scenes/Backstage.unity
+    guid: 2f9b06ad77e390240878d536f03600eb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

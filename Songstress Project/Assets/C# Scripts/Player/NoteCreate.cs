@@ -119,24 +119,7 @@ public class NoteCreate : MonoBehaviour
 
         }
     }
-    public int InstrumentSelection()
-    {
-        int instrument = InstrummentManager.SelectedInstrument;
-
-        // optional switch for processing:
-        switch (instrument)
-        {
-            case 0: Debug.Log("Kalimba"); break;
-            case 1: Debug.Log("E Guitar"); break;
-            case 2: Debug.Log("Guitar"); break;
-            case 3: Debug.Log("Sax"); break;
-            case 4: Debug.Log("Harmonica"); break;
-            case 5: Debug.Log("Djembe"); break;
-
-        }
-
-        return instrument;
-    }
+    
     private void InputChecker()
     {
         if (!currentCombo.Contains(1)) if (Input.GetKey("1")) currentCombo.Add(1);
