@@ -98,6 +98,8 @@ public class NoteCreate : MonoBehaviour
 
             attackKeys(notePlacement);
 
+
+
         }
     }
     public int InstrumentSelection()
