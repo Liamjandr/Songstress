@@ -58,7 +58,7 @@ public class NoteCreate : MonoBehaviour
         Instrument = InstrumentManager.SelectedInstrument;
 
         // optional switch for processing:
-        switch (instrument)
+        switch (Instrument)
         {
             case 0: Debug.Log("Kalimba"); break;
             case 1: Debug.Log("E Guitar"); break;
