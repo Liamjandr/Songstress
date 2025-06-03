@@ -148,6 +148,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -472,7 +498,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Songstess_0: 7830747664439236983
+      Songstess_1: 235276749268957979
+      Songstess_10: -1740964513561191339
+      Songstess_11: 4604430335569456850
+      Songstess_12: -2526142451510687362
+      Songstess_13: 4076605080509673719
+      Songstess_2: -4743336866685012773
+      Songstess_3: 548584404243388005
+      Songstess_4: -7418396079870891217
+      Songstess_5: -5422034723110761797
+      Songstess_6: -2778476613333092285
+      Songstess_7: -8129012351452914421
+      Songstess_8: 7109803065199190606
+      Songstess_9: 8415020989967249699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
